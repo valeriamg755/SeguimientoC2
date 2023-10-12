@@ -1,0 +1,27 @@
+CDI y Contextos
+
+Pool de conexiones:
+Método pool.setInitialSize(3);
+x
+
+Método pool.setInitialSize(3);
+x
+
+Método pool.setInitialSize(3);
+x
+
+Contextos:
+@Dependent
+x
+
+@RequestScoped
+x
+
+@SessionScoped
+x
+
+@ConversationScoped
+x
+
+@ApplicationScoped
+x

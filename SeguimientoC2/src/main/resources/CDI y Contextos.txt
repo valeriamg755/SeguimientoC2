@@ -1,0 +1,53 @@
+----------------------------------------------------------------------------------
+CDI (Contexts and Dependency Injection) y Contextos
+----------------------------------------------------------------------------------
+
+Pool de conexiones:
+
+Método pool.setInitialSize(3);
+- Establece el tamaño inicial de un conjunto de objetos en un pool (grupo) a 3. Los pools se utilizan para administrar y reutilizar recursos, como conexiones de base de datos.
+
+Método pool.setMinIdle(3);
+- Define la cantidad mínima de objetos que deben estar disponibles en un pool en todo momento. En este caso, se establece en 3 objetos.
+
+Método pool.setMaxIdle(8);
+- Define la cantidad mínima de objetos que deben estar disponibles en un pool en todo momento. En este caso, se establece en 3 objetos.
+
+----------------------------------------------------------------------------------
+
+Contextos:
+
+@Dependent
+- Es un alcance de CDI que crea una nueva instancia del componente para cada inyección. Cada instancia es independiente de las demás.
+
+@RequestScoped
+- Es un alcance de CDI que crea una instancia de un componente por cada solicitud HTTP. Estas instancias existen solo durante el tiempo de procesamiento de la solicitud.
+
+@SessionScoped
+- Es un alcance de CDI que crea una instancia de un componente por sesión de usuario. Las instancias persisten durante la sesión del usuario en una aplicación web.
+
+@ConversationScoped
+- Es un alcance de CDI que permite mantener una conversación continua con un usuario a lo largo de múltiples solicitudes HTTP, generalmente en aplicaciones web.
+
+@ApplicationScoped
+- Es un alcance de CDI que crea una única instancia de un componente que es compartida por todas las solicitudes en toda la aplicación. La instancia persiste mientras la aplicación está en ejecución.
+----------------------------------------------------------------------------------
+
+Notaciones:
+
+@Retention
+- Es una anotación utilizada en Java para especificar cuánto tiempo se debe retener una anotación en el código fuente, la clase o en tiempo de ejecución. Los valores comunes son SOURCE, CLASS, y RUNTIME.
+
+@Target
+- Es una anotación en Java que se usa para especificar en qué elementos (clases, métodos, campos, etc.) se puede aplicar una anotación personalizada.
+
+@Qualifier
+- En el contexto de CDI, se utiliza para calificar una inyección de dependencia, lo que permite especificar cuál de varias implementaciones de la misma interfaz debe inyectarse en un componente. Esto se usa para resolver ambigüedades en la inyección de dependencias cuando hay múltiples implementaciones disponibles.
+-------------------------------------------------------------------------------------
+
+Referencias:
+
+- Apache Commons DBCP: https://commons.apache.org/proper/commons-dbcp/
+- HikariCP: https://github.com/brettwooldridge/HikariCP
+- Oracle Java EE Documentation: https://docs.oracle.com/javaee/7/tutorial/cdi-adv-examples002.htm
+- Oracle Java Documentation: https://docs.oracle.com/javase/tutorial/java/annotations/
